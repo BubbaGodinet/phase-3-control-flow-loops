@@ -1,5 +1,12 @@
+require "pry"
+
 def happy_new_year
-  # your code here
+  i = 11
+  while i != 1
+    i -= 1
+    puts i
+    puts "Happy New Year!" if i == 1 
+  end
 end
 
 # No need to modify this code! Use this to implement the fizzbuzz_printer method.
@@ -16,9 +23,18 @@ def fizzbuzz(num)
 end
 
 def fizzbuzz_printer
-  # your code here
+  count = 1
+  until count == 101 
+    puts fizzbuzz(count)
+    count += 1
+  end
 end
 
+
 def reverse_string(str)
-  # your code here
+  str.chars.reduce {|x, y| y + x}
 end
+
+binding.pry
+
+0
